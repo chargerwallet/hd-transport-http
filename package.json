@@ -1,0 +1,30 @@
+{
+  "name": "@chargerwallet/hd-transport-http",
+  "version": "3.0.0",
+  "keywords": [
+    "hd-transport-http"
+  ],
+  "author": "dev@chargerwallet.com",
+  "repository": "https://github.com/chargerwallet/hd-transport-http",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "files": [
+    "dist/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "rimraf dist && rollup -c ../../build/rollup.config.js -w",
+    "build": "rimraf dist && rollup -c ../../build/rollup.config.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@chargerwallet/hd-shared": "4.0.0",
+    "@chargerwallet/hd-transport": "4.0.0",
+    "axios": "^0.27.2"
+  }
+}
